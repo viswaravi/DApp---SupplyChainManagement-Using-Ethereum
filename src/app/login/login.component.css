@@ -1,0 +1,81 @@
+#backpage{
+    display: block;
+    position : fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,  #24c6dc, #514a9d  );
+}
+#logBox{
+    display: block;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    height: auto;
+    width: 270px;
+    left: 36%;
+    top:30%;
+    margin: 1px solid black;
+    padding: 40px;
+    padding-right: 0px;
+    padding-top: 10px;
+}
+
+#logo{
+    display: block;
+    position: fixed;
+    padding: 10px 30px 10px 130px;
+    width: 150px;
+    height: 150px;
+    left: 32%;
+    z-index: 1;
+}
+
+
+input{
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid black;
+    display: block;
+    height: 30px;
+    font-size: 1.1em;
+    color: white;
+    font-family: cursive;
+}
+label{
+    color: white;
+    font-size: 1.1em;
+    font-family: cursive;
+}
+
+h1{
+    color:#afc0dd;
+    font-family:'Courier New', Courier, monospace;
+}
+button:hover{
+    cursor: pointer;
+}
+button{
+    border: 0px;
+    border: 1px solid silver;
+    border-radius: 20px;
+    font-family: cursive;
+    color: white;
+    background:#07a3b5;
+    display: block;
+    width: 100px;
+    height: 30px;
+    position: relative;
+    left: 20%;
+    padding: 1px;
+}
+#signupbtn{
+    display: block;
+    position: relative;
+    left:30%;
+    color: white;
+    font-family: cursive;
+}
+#signupbtn:hover{
+    cursor: pointer;
+    color: silver;
+}

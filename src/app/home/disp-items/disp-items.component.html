@@ -1,0 +1,48 @@
+<div *ngFor="let item of items"> 
+<div class="container">
+  <p><span> <img src="../../../assets/products.png"> </span>{{item.name}}</p><br>
+  <p><span> <img src="../../../assets/products.png"> </span>{{item.quantity}}</p><br>
+  <p><span> <img src="../../../assets/shop.png"> </span>{{item.location}}</p><br>
+  <p><span> <img src="../../../assets/dollar.png"> </span>{{item.cost}}</p><br>
+  <p><span> <img src="../../../assets/user.png"> </span>{{item.owner}}</p><br>
+  
+  <button class="optBtn mlink" (click)="open(content,item._id)"  >Sell / Transact</button>
+  </div>
+  <br>
+</div>
+
+
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <form  [formGroup]="transactForm"  (ngSubmit)="TransactItem()">
+      <table id="t1" cellspacing="10" cellpadding="10" > 
+     <tr>
+        <td><span><img src="../../assets/signup.png" ></span>To</td>
+        <td><input autocomplete="off" type="text" formControlName="to" class="form-control" id="product_id" list="users">
+        <datalist id="users">
+          <option  *ngFor="let name of usernames">{{name}}</option> 
+        </datalist>
+        </td>
+    </tr> 
+    <tr>
+        <td><span><img src="../../assets/location.png" ></span>Location</td>
+        <td><input type="text" class="form-control" formControlName="location" id="area"></td>
+    </tr>    
+    <tr>
+        <td><span><img src="../../assets/dollar.png" ></span>Cost</td>
+        <td><input type="number" class="form-control" formControlName="cost" id="cost"></td>
+    </tr> 
+    <tr>
+        <td>
+            &nbsp;
+            </td>
+        </tr>
+        <tr>
+        <td>
+            <input type="submit" class="form-control" class="btn btn-success" value="Add Item">
+            </td>
+        </tr>
+    </table>
+    </form>
+  </div>
+</ng-template>

@@ -1,0 +1,23 @@
+.optBtn{
+    width: 200px;
+    justify-self: center;
+    border: 0px;
+    background: #F7DAAC;
+    background:#F7DAAC;
+    font-family: cursive;
+    border-radius: 25px;
+    padding: 4px 1px 4px 1px;
+    transition: all .2s;
+}
+.container{
+    padding: 5px;
+    border-bottom: 0.5px solid #8B8B8B;
+}
+img{
+    height: 40px;
+    width:40px;
+    border-right: 20px;
+}
+*{
+    font-size: 17px;
+}

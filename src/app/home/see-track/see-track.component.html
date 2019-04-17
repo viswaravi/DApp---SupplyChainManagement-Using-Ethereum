@@ -1,0 +1,81 @@
+<section class="cd-timeline js-cd-timeline">
+    <div class="cd-timeline__container">
+
+  <!--  <div *ngFor="let tx of transactions;let i = index" [ngStyle]="{ float: getFloat(i) }" > -->
+    
+    <select   class="form-control" required [(ngModel)]="trackedItem" (change)="changeTrackedTransactions()" style="display: block;overflow: hidden;margin-bottom: 10px;">
+        <option *ngFor="let item of items">{{item._id}}-{{item.name}}</option>
+    </select>
+
+  <div *ngFor="let tx of trackedTransactions" >
+   
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+                <img src="../../../assets/corn.png" alt="Picture">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content" >
+                <h5><span><img src="../../../assets/sell.png" ></span>{{tx.from}}</h5>
+                <h5><span><img src="../../../assets/buy.png" ></span>{{tx.to}}</h5>
+                <h5><span><img src="../../../assets/dollar.png" ></span>{{tx.cost}}</h5>
+                <h5><span><img src="../../../assets/location.png" ></span>{{tx.location}}</h5>
+            </div>
+            
+        </div> 
+    </div>
+<!--
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+                <img src="../../../assets/location.png" alt="Location">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content">
+                <h2>Transaction 2</h2>
+            </div>
+        </div>
+     
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content">
+                <h2>Transaction 3</h2>
+                <span class="cd-timeline__date">Jan 24</span>
+            </div> 
+        </div> 
+
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content">
+                <h2>Transaction4</h2>
+                <span class="cd-timeline__date">Feb 14</span>
+            </div> 
+        </div>
+
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content">
+                <h2>Transaction 5</h2>
+                <span class="cd-timeline__date">Feb 18</span>
+            </div>
+        </div> 
+
+        <div class="cd-timeline__block js-cd-block">
+            <div class="cd-timeline__img cd-timeline__img--location js-cd-img">
+                <img src="img/cd-icon-location.svg" alt="Location">
+            </div> 
+
+            <div class="cd-timeline__content js-cd-content">
+                <h2>User</h2>
+                <span class="cd-timeline__date">Feb 26</span>
+            </div>
+        </div> -->
+    </div>
+</section>
